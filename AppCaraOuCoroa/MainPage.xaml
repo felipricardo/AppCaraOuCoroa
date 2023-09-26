@@ -6,7 +6,8 @@
 
     <StackLayout>
         <Image Source="logo" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-        <ImageButton Source="botao_jogar" Margin="20" BackgroundColor="Transparent" x:Name="btJogar"/>
+        <ImageButton Source="botao_jogar" Margin="20" BackgroundColor="Transparent" 
+                     x:Name="btJogar" Clicked="btJogar_Clicked"/>
 
     </StackLayout>
 

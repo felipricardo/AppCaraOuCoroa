@@ -14,5 +14,10 @@ namespace AppCaraOuCoroa
         {
             InitializeComponent();
         }
+
+        private async void btJogar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PageJogo());
+        }
     }
 }
