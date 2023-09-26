@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppCaraOuCoroa.MainPage"
              BackgroundColor="#63BF8B"
-             Title="Cara ou coroa">
+             Title="Escolha cara ou coroa e clique em jogar">
 
     <StackLayout>
         <Image Source="logo" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
