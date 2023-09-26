@@ -15,6 +15,21 @@ namespace AppCaraOuCoroa
         public PageJogo()
         {
             InitializeComponent();
+            Random r = new Random();
+            int n = r.Next(1, 3);
+            if (n == 1)
+            {
+                imgMoeda.Source = "moeda_cara";
+            }
+            else
+            {
+                imgMoeda.Source = "moeda_caroa";
+            }
+        }
+
+        private async void btVoltar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }

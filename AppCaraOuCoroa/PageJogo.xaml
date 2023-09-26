@@ -5,9 +5,11 @@
              BackgroundColor="#63BF8B">
     <ContentPage.Content>
         <StackLayout>
-            <Image Source="moeda_cara" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-            <ImageButton Source="botao_jogar" Margin="20" BackgroundColor="Transparent" 
-             x:Name="btJogar" Clicked="btJogar_Clicked"/>
+            <Image 
+                x:Name="imgMoeda" Source="moeda_cara" 
+                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            <ImageButton Source="botao_voltar" Margin="20" BackgroundColor="Transparent" 
+             x:Name="btVoltar" Clicked="btVoltar_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
