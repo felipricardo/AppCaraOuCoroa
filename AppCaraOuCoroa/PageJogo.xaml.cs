@@ -26,7 +26,7 @@ namespace AppCaraOuCoroa
             try
             {
                 // Use default vibration length
-                Vibration.Vibrate();
+                //Vibration.Vibrate();
 
                 // Or use specified time
                 var duration = TimeSpan.FromSeconds(1);
@@ -35,10 +35,12 @@ namespace AppCaraOuCoroa
             catch (FeatureNotSupportedException ex)
             {
                 // Feature not supported on device
+                DisplayAlert("Error", ex.Message, "OK");
             }
             catch (Exception ex)
             {
                 // Other error has occurred.
+                DisplayAlert("Error", ex.Message, "OK");
             }
         }
 
