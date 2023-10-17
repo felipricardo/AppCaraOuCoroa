@@ -29,8 +29,7 @@ namespace AppCaraOuCoroa
             TimeSpan inactivityDuration = DateTime.Now - lastInteractionTime;
             if (!isRedirected && inactivityDuration.TotalMilliseconds >= 20000) // 20 segundos
             {
-                // O usuário está inativo por mais de 20 segundos, redirecione para a tela de login.
-                MainPage.Navigation.PushAsync(new MainPage()); // Substitua LogonPage pela sua página de login.
+                MainPage.Navigation.PushAsync(new MainPage());
                 isRedirected = true;
             }
         }
