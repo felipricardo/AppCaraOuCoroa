@@ -18,7 +18,6 @@ namespace AppCaraOuCoroa
 
         protected override void OnStart()
         {
-            // Quando o aplicativo é iniciado, registre o tempo da última interação.
             lastInteractionTime = DateTime.Now;
             isRedirected = false;
         }
@@ -27,16 +26,15 @@ namespace AppCaraOuCoroa
         {
             // Quando o aplicativo entra em estado de suspensão (background), verifique o tempo de inatividade.
             TimeSpan inactivityDuration = DateTime.Now - lastInteractionTime;
-            if (!isRedirected && inactivityDuration.TotalMilliseconds >= 20000) // 20 segundos
+            if (!isRedirected && inactivityDuration.TotalMilliseconds >= 20000)
             {
-                MainPage.Navigation.PushAsync(new MainPage());
+                MainPage = new NavigationPage(new MainPage());
                 isRedirected = true;
             }
         }
 
         protected override void OnResume()
         {
-            // Quando o aplicativo retorna ao primeiro plano, atualize o tempo da última interação.
             lastInteractionTime = DateTime.Now;
             isRedirected = false;
         }
