@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace AppCaraOuCoroa
@@ -17,6 +13,20 @@ namespace AppCaraOuCoroa
 
         private async void btJogar_Clicked(object sender, EventArgs e)
         {
+            try
+            {
+                var duration = TimeSpan.FromSeconds(0.5);
+                Vibration.Vibrate(duration);
+            }
+            catch (FeatureNotSupportedException ex)
+            {
+                DisplayAlert("Error", ex.Message, "OK");
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Error", ex.Message, "OK");
+            }
+
             await Navigation.PushAsync(new PageJogo());
         }
     }

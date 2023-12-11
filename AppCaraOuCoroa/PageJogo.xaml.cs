@@ -34,12 +34,10 @@ namespace AppCaraOuCoroa
             }
             catch (FeatureNotSupportedException ex)
             {
-                // Feature not supported on device
                 DisplayAlert("Error", ex.Message, "OK");
             }
             catch (Exception ex)
             {
-                // Other error has occurred.
                 DisplayAlert("Error", ex.Message, "OK");
             }
         }
